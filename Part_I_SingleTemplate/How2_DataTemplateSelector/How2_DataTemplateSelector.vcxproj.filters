@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="clWinUIControl_RNAList.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="MainWindow.idl" />
+    <Midl Include="clWinUINucleotide.idl" />
+    <Midl Include="clWinUIRNA.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="Biochemistry\Nucleotide.cpp">
+      <Filter>Biochemistry</Filter>
+    </ClCompile>
+    <ClCompile Include="Biochemistry\RNA.cpp">
+      <Filter>Biochemistry</Filter>
+    </ClCompile>
+    <ClCompile Include="clWinUINucleotide.cpp" />
+    <ClCompile Include="clWinUIRNA.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Biochemistry\Nucleotide.h">
+      <Filter>Biochemistry</Filter>
+    </ClInclude>
+    <ClInclude Include="Biochemistry\RNA.h">
+      <Filter>Biochemistry</Filter>
+    </ClInclude>
+    <ClInclude Include="clWinUIRNA.h" />
+    <ClInclude Include="clWinUINucleotide.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{8c7b99c8-2edd-4454-be86-462ac67e7bd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Biochemistry">
+      <UniqueIdentifier>{6afd0f99-48b8-4b72-b6f7-102ecc6c4a0e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

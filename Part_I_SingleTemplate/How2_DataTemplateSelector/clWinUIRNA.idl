@@ -1,0 +1,14 @@
+import	"clWinUINucleotide.idl";
+
+namespace	How2_DataTemplateSelector
+{
+	runtimeclass    clWinUIRNA : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+	{
+				clWinUIRNA();
+
+			Windows.Foundation.Collections.IObservableVector<clWinUINucleotide>      Get_obsvecRNA_Property{ get; };
+
+        void CreateAndAddNucleotide(Char wcSymbol);
+
+	}
+}

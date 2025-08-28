@@ -1,0 +1,13 @@
+import "clWinUIRNA.idl"; 
+
+namespace How2_DataTemplateSelector
+{
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+
+        clWinUIRNA  GetWinUIRNA_Window_Property{get;};
+    
+    }
+}

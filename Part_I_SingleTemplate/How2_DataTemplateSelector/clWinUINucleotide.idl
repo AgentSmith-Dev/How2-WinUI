@@ -1,0 +1,23 @@
+namespace	How2_DataTemplateSelector
+{
+
+	enum enNucleotide_Type
+	{
+		None = 0,
+		Adenine = 1,
+		Cytosine = 2,
+		Guanine = 3,
+		Uracil = 4, // RNA
+		Thymine = 5, // DNA
+	};
+
+
+	runtimeclass    clWinUINucleotide	: Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+	{
+							clWinUINucleotide();
+							clWinUINucleotide(enNucleotide_Type   _enNucleotide_Type);
+
+					String  hstrSymbol_Property;
+		enNucleotide_Type	enNucleotide_Type_Property;
+	}
+}

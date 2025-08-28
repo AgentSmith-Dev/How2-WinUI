@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// *******************************************************************************
+//!<@copyright  Agent Smith, Dresden Germany
+//!             www.agent-smith.dev    
+// 
+//  Initial code by AGS, 2025
+// 
+//  *******************************************************************************
+    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    Our main Window
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    
+-->
+<Window
+    x:Class="How2_DataTemplateSelector.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:How2_DataTemplateSelector"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="How2_DataTemplateSelector - Part I">
+
+    <local:clWinUIControl_RNAList   GetWinUIRNA_Page_Property="{x:Bind  GetWinUIRNA_Window_Property}"/>
+</Window>

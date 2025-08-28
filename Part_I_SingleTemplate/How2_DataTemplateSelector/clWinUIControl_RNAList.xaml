@@ -1,0 +1,55 @@
+﻿<!--
+// *******************************************************************************
+//!<@copyright  Agent Smith, Dresden Germany
+//!             www.agent-smith.dev    
+// 
+//  Initial code by AGS, 2025
+// 
+//  *******************************************************************************
+    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    a user control showing the RNA
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+-->
+    
+<Page
+    x:Class="How2_DataTemplateSelector.clWinUIControl_RNAList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:How2_DataTemplateSelector"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+
+    <Page.Resources>
+
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    A Nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide" x:DataType="local:clWinUINucleotide">
+            <Border BorderThickness="2, 2, 2, 2"    
+                    Background="{StaticResource CardBackgroundFillColorDefaultBrush}"   
+                    BorderBrush="{StaticResource    ControlElevationBorderBrush}"
+                    >
+                <StackPanel Orientation="Vertical"  HorizontalAlignment="Center">
+                    <TextBlock Text="{x:Bind hstrSymbol_Property, Mode=OneWay}" 
+                        Margin="5"
+                        Style="{StaticResource   TitleTextBlockStyle}"
+                    />
+                </StackPanel>
+            </Border>
+
+        </DataTemplate>
+    </Page.Resources>
+
+    <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+    <!--    Grid to show the RNA -->
+    <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+    <ListView   x:Name="List_RNA"
+                ItemsSource="{x:Bind     GetWinUIRNA_Page_Property.Get_obsvecRNA_Property, Mode=OneWay}"
+                ItemTemplate="{StaticResource resNucleotide}"   
+                Width="100"
+    >
+    </ListView>
+</Page>
