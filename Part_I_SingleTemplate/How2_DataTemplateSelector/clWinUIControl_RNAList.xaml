@@ -44,7 +44,7 @@
     </Page.Resources>
 
     <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
-    <!--    Grid to show the RNA -->
+    <!--    Control to show the RNA -->
     <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
     <ListView   x:Name="List_RNA"
                 ItemsSource="{x:Bind     GetWinUIRNA_Page_Property.Get_obsvecRNA_Property, Mode=OneWay}"
