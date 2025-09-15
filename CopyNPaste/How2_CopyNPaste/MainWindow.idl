@@ -1,0 +1,15 @@
+import "clWinUIRNA.idl"; 
+
+namespace How2_CopyNPaste
+{
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+                    MainWindow();
+
+        clWinUIRNA  GetWinUIRNA_Window_Property{get;};
+            Boolean bHasRNAClipboardData;
+            Boolean bHasRNAData{get;};
+
+    }
+}

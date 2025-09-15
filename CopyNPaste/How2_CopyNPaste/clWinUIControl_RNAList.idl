@@ -1,0 +1,11 @@
+import "clWinUIRNA.idl"; 
+
+namespace How2_CopyNPaste
+{
+    [default_interface]
+    runtimeclass clWinUIControl_RNAList : Microsoft.UI.Xaml.Controls.Page//, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        clWinUIControl_RNAList();
+        clWinUIRNA  GetWinUIRNA_Page_Property;
+    }
+}

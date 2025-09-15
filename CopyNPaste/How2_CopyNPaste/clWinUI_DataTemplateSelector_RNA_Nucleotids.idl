@@ -1,0 +1,14 @@
+namespace How2_CopyNPaste
+{
+        runtimeclass    clWinUI_DataTemplateSelector_RNA_Nucleotids : Microsoft.UI.Xaml.Controls.DataTemplateSelector
+        {
+            clWinUI_DataTemplateSelector_RNA_Nucleotids();
+
+            Microsoft.UI.Xaml.DataTemplate    Adenine_Property;
+            Microsoft.UI.Xaml.DataTemplate    Cytosine_Property;
+            Microsoft.UI.Xaml.DataTemplate    Guanine_Property;
+            Microsoft.UI.Xaml.DataTemplate    Uracil_Property;
+            Microsoft.UI.Xaml.DataTemplate    Error_Property;
+
+        }
+}

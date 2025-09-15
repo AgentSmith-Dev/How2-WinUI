@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// *******************************************************************************
+//!<@copyright  Agent Smith, Dresden Germany
+//!             www.agent-smith.dev    
+// 
+//  Initial code by AGS, 2025
+// 
+//  *******************************************************************************
+    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    Our main Window
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    
+-->
+<Window
+    x:Class="How2_CopyNPaste.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:How2_CopyNPaste"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="How 2: Copy &amp; Paste">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+       
+        <local:clWinUIControl_RNAList   Grid.Column="0"   GetWinUIRNA_Page_Property="{x:Bind  GetWinUIRNA_Window_Property}"/>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical"  VerticalAlignment="Center">
+            <Button x:Name="Btn_Paste"
+                    IsEnabled="{x:Bind  bHasRNAClipboardData, Mode=OneWay}"
+                    Click="OnBtnPastAtRNAEnd_Click"
+                    Width="150"
+                    >Paste at end</Button>
+
+            <Button x:Name="Btn_Clear"
+                    IsEnabled="{x:Bind  bHasRNAData, Mode=OneWay}"
+                    Click="OnBtnClearRNA_Click"
+                    Width="150"
+                    Margin="0, 10, 0, 0"
+                    >Clear RNA</Button>
+        </StackPanel>
+    </Grid>
+</Window>
