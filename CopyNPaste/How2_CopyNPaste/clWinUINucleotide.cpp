@@ -55,27 +55,6 @@ namespace winrt::How2_CopyNPaste::implementation
     }
 
     //  ------------------------------------------------------------------------------------------------------
-	/*! \brief  attach/detach a nucleotide to the WinUI representation
-    *   \date   08/22/2025  AGS Start
-    */
-    //  ------------------------------------------------------------------------------------------------------
-/*
-    void    clWinUINucleotide::AttachNucleotid(clNucleotide* pNucleotide)
-    {
-		m_pNucleotide = pNucleotide;
-
-        return;
-    }
-
-    void    clWinUINucleotide::DetachNucleotid()
-    {
-        m_pNucleotide = nullptr;
-
-        return;
-    }
-*/
-
-    //  ------------------------------------------------------------------------------------------------------
 	/*! \brief  Property (to be used by XAML): nucleotide symbol
     *   \date   08/22/2025  AGS Start
     */

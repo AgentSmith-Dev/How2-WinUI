@@ -1,3 +1,11 @@
+// *******************************************************************************
+//!<@copyright  Agent Smith, Dresden Germany
+//!             www.agent-smith.dev    
+// 
+//  Initial code by AGS, 2025
+// 
+//  *******************************************************************************
+
 #include "pch.h"
 #include "MainWindow.xaml.h"
 #if __has_include("MainWindow.g.cpp")
@@ -50,13 +58,11 @@ namespace winrt::How2_CopyNPaste::implementation
 
         UpdateClipboardState();
 
-
-
-
     }
 
     MainWindow::~MainWindow()
     {
+        winrt::Windows::ApplicationModel::DataTransfer::Clipboard::ContentChanged(m_EventToken_ClipboardChanged);
     }
 
     //  ------------------------------------------------------------------------------------------------------
@@ -131,16 +137,14 @@ namespace winrt::How2_CopyNPaste::implementation
     //  ------------------------------------------------------------------------------------------------------
     /*! \brief  event handler for changes of the clipboard - called by the framework
     *   \date   09/15/2025  AGS Start
-    *	\param
-    *	\param
+    *	\param  sender
+    *	\param  e
     */
     //  ------------------------------------------------------------------------------------------------------
     void MainWindow::OnClipboardChanged(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::Foundation::IInspectable const& e)
     {
         sender;
         e;
-
-        OutputDebugStringW(L"Calling clWinUIControl_RNAList::OnClipboardChanged\n");
 
         UpdateClipboardState();
 
@@ -149,21 +153,20 @@ namespace winrt::How2_CopyNPaste::implementation
 
     //  ------------------------------------------------------------------------------------------------------
     /*! \brief  update the clipboard of the app
+    *           
+    *           for formats available in the clipboard \see https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.standarddataformats.text?view=winrt-22621
     *   \date   09/15/2025  AGS Start
-    *	\param
-    *	\param
     */
     //  ------------------------------------------------------------------------------------------------------
     void MainWindow::UpdateClipboardState()
     {
-        OutputDebugStringW(L"clWinUIControl_RNAList::UpdateClipboardState\n");
-
         bool    bHasTextInClipboard = true;
 
-        //  for formats available in the clipboard \see https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.standarddataformats.text?view=winrt-22621
-        winrt::Windows::ApplicationModel::DataTransfer::DataPackageView dataPackageView{ 0 };
+        winrt::Windows::ApplicationModel::DataTransfer::DataPackageView dataPackageView=nullptr;
+
         dataPackageView = winrt::Windows::ApplicationModel::DataTransfer::Clipboard::GetContent();
         hstring hstrTextFormat = winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats::Text();
+
         if (dataPackageView.Contains(hstrTextFormat)) {
             bHasTextInClipboard = true;
             OutputDebugStringW(L"Clipboad contains text\n");
@@ -183,11 +186,10 @@ namespace winrt::How2_CopyNPaste::implementation
     //  ------------------------------------------------------------------------------------------------------
     /*! \brief  called by the framework: the button "Paste at end" has been clicked
     *   \date   09/15/2025  AGS Start
-    *	\param
-    *	\param
+    *	\param  sender
+    *	\param  e
     */
     //  ------------------------------------------------------------------------------------------------------
-
     void MainWindow::OnBtnPastAtRNAEnd_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
     {
         sender; e;
@@ -199,13 +201,12 @@ namespace winrt::How2_CopyNPaste::implementation
     //  ------------------------------------------------------------------------------------------------------
     /*! \brief  paste clipboard content to the end of the RNA
     *   \date   09/15/2025  AGS Start
-    *	\param
-    *	\param
     */
     //  ------------------------------------------------------------------------------------------------------
     winrt::Windows::Foundation::IAsyncAction    MainWindow::PasteClipboardToRNA()
     {
-        winrt::Windows::ApplicationModel::DataTransfer::DataPackageView dataPackageView{ 0 };
+        winrt::Windows::ApplicationModel::DataTransfer::DataPackageView dataPackageView = nullptr;
+
         dataPackageView = winrt::Windows::ApplicationModel::DataTransfer::Clipboard::GetContent();
 
         winrt::hstring  hstrClipBoard = co_await    dataPackageView.GetTextAsync();
@@ -234,7 +235,8 @@ namespace winrt::How2_CopyNPaste::implementation
     //  ------------------------------------------------------------------------------------------------------
     void winrt::How2_CopyNPaste::implementation::MainWindow::OnBtnClearRNA_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
     {
-        sender; e;
+        sender; 
+        e;
 
         m_WinUIRNA.Get_obsvecRNA_Property().Clear();
 

@@ -1,5 +1,5 @@
 ========================================================================
-    How2_DataTemplateSelector Project Overview
+    How2_CopyNPaste Project Overview
 ========================================================================
 
 This project demonstrates how to get started writing WinUI3 apps directly
