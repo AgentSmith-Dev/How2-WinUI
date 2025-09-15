@@ -20,7 +20,7 @@ namespace winrt::How2_DataTemplateSelector::implementation
 
     //  ------------------------------------------------------------------------------------------------------
 	/*! \brief  Constructor for clWinUIRNA
-    *   \desc
+    *   \detail
     *   \date   08/22/2025  AGS Start
     */
     //  ------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ namespace winrt::How2_DataTemplateSelector::implementation
 
     //  ------------------------------------------------------------------------------------------------------
     /*! \brief  add a nucleotide specified by its symbol to the RNA
-    *   \desc
+    *   \detail
     *   \date   08/22/2025  AGS Start
     */
     //  ------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ namespace winrt::How2_DataTemplateSelector::implementation
 
     //  ------------------------------------------------------------------------------------------------------
 	/*! \brief  Property (to be used by XAML): vector with RNA nucleotides
-    *   \desc
+    *   \detail
     *   \date   08/22/2025  AGS Start
     */
     //  ------------------------------------------------------------------------------------------------------
