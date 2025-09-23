@@ -13,15 +13,23 @@ If not explicitely mentioned otherwise, I use C++ to program WinUI.
 ## Tutorial 1 - How to make a Data Template Selector (Part I)
 ![Teaser Tutorial 1/Part I](https://www.agent-smith.dev/wp-content/uploads/2025/08/DSC_3808-720x480.jpg)
 
-Find a detailled tutorial in [Agent Smith's Blog - Data Template Selector/Part I](https://www.agent-smith.dev/winui-stuff-how-to-use-a-data-template-selector-for-listview-or-gridview-controls-c/)
+Find a detailed tutorial in [Agent Smith's Blog - Data Template Selector/Part I](https://www.agent-smith.dev/winui-stuff-how-to-use-a-data-template-selector-for-listview-or-gridview-controls-c/)
 
 The code for Part I: [GitHub Link for Part II](Part_I_SingleTemplate/How2_DataTemplateSelector)
 
 
 ## Tutorial 2 - How to make a Data Template Selector (Part II)
-![Teaser Tuturial 2/Part II](https://www.agent-smith.dev/wp-content/uploads/2025/09/DSC_3810-720x380.jpg)
+![Teaser Tutorial 2/Part II](https://www.agent-smith.dev/wp-content/uploads/2025/09/DSC_3810-720x380.jpg)
 
-Find a detailled tutorial in [Agent Smith's Blog - Data Template Selector/Part I](https://www.agent-smith.dev/winui-stuff-how-to-use-a-data-template-selector-for-listview-or-gridview-controls-c-part-ii/)
+Find a detailed tutorial in [Agent Smith's Blog - Data Template Selector/Part I](https://www.agent-smith.dev/winui-stuff-how-to-use-a-data-template-selector-for-listview-or-gridview-controls-c-part-ii/)
 
 The code for Part II: [GitHub Link for Part I](Part_II_MultipleTemplates/How2_DataTemplateSelector)
+
+
+## Tutorial 3 - How to program a Copy & Paste operation
+![Teaser Tutorial 3](https://www.agent-smith.dev/wp-content/uploads/2025/09/Img068-720x380.jpg)
+
+Find a detailed tutorial in [Agent Smith's Blog - Copy & Paste](https://www.agent-smith.dev/winui-stuff-how-to-program-copy-paste-operations-c/)
+
+The code: [GitHub Link for tutorial #3](CopyNPaste/How2_CopyNPaste)
 
