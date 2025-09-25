@@ -1,0 +1,11 @@
+import "clWinUIRNA.idl"; 
+
+namespace How2_PropertyChange_DataBinding
+{
+    [default_interface]
+    runtimeclass clWinUIControl_RNAList : Microsoft.UI.Xaml.Controls.Page
+    {
+        clWinUIControl_RNAList();
+        clWinUIRNA  GetWinUIRNA_Page_Property;
+    }
+}
