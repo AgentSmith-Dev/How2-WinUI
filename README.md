@@ -34,7 +34,7 @@ Find a detailed tutorial in [Agent Smith's Blog - Copy & Paste](https://www.agen
 The code: [GitHub Link for tutorial #3](CopyNPaste/How2_CopyNPaste)
 
 
-## Tutorial 4 - How to program a Copy & Paste operation
+## Tutorial 4 - How to program a Property Change Notification (Part I)
 ![Teaser Tutorial 4](https://www.agent-smith.dev/wp-content/uploads/2025/09/DSC_3851-720x380.jpg)
 
 Find a detailed tutorial in [Agent Smith's Blog - Property Change Notification](https://www.agent-smith.dev/winui-stuff-how-to-keep-your-ui-in-sync-using-property-change-notification-and-data-binding-c/)
@@ -42,7 +42,7 @@ Find a detailed tutorial in [Agent Smith's Blog - Property Change Notification](
 The code: [GitHub Link for tutorial #4](PropertyChange)
 
 
-## Tutorial 5 - How to program a Copy & Paste operation
+## Tutorial 5 - How to program a Property Change Notification (Part II) - using IObservableVector
 ![Teaser Tutorial 5](https://www.agent-smith.dev/wp-content/uploads/2025/10/DSC_3849-720x380.jpg)
 
 Find a detailed tutorial in [Agent Smith's Blog - Property Change Notification - Part II](https://www.agent-smith.dev/winui-stuff-how-to-program-a-property-change-notification-part-ii-in-user-control-to-keep-your-ui-in-sync-c/)
