@@ -1,0 +1,13 @@
+import "clWinUIRNA.idl"; 
+
+namespace How2_PropertyChange_II
+{
+    [default_interface]
+    runtimeclass clWinUIControl_RNAInfo : Microsoft.UI.Xaml.Controls.UserControl,   Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        clWinUIControl_RNAInfo();
+
+        clWinUIRNA  GetWinUIRNA_Property;
+
+    }
+}

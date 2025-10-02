@@ -1,0 +1,174 @@
+﻿<!--
+// *******************************************************************************
+//!<@copyright  Agent Smith, Dresden Germany
+//!             www.agent-smith.dev    
+// 
+//  Initial code by AGS, 2025
+// 
+//  *******************************************************************************
+    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+    a user control showing the RNA
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    
+-->
+    
+<Page
+    x:Class="How2_PropertyChange_II.clWinUIControl_RNAList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:How2_PropertyChange_II"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+
+    <Page.Resources>
+
+
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    A Nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide" x:DataType="local:clWinUINucleotide">
+            <StackPanel>
+                <TextBlock Text="{x:Bind hstrSymbol_Property, Mode=OneWay}" 
+                           Margin="5"
+                           Style="{StaticResource   TitleTextBlockStyle}"
+                />
+            </StackPanel>
+        </DataTemplate>
+
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    The Adenine nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide_Adenine" x:DataType="local:clWinUINucleotide">
+            <Border BorderThickness="2, 2, 2, 2"    
+                    Background="Orange"   
+                    BorderBrush="{StaticResource    ControlElevationBorderBrush}">
+                <StackPanel Orientation="Vertical">
+                    <ContentControl ContentTemplate="{StaticResource resNucleotide}" 
+                                    Content="{x:Bind}"   
+                                    HorizontalAlignment="Center"
+                                    Width="Auto"/>
+                    <TextBlock    Width="Auto" Text="Adenine"   HorizontalAlignment="Center"
+                                  Style="{StaticResource   CaptionTextBlockStyle}"
+                                  Margin="2"
+                    />
+                </StackPanel>
+
+            </Border>
+
+        </DataTemplate>
+
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    The Cytosine nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide_Cytosine" x:DataType="local:clWinUINucleotide">
+            <Border BorderThickness="2, 2, 2, 2"    Background="DarkSalmon"   BorderBrush="{StaticResource    ControlElevationBorderBrush}">
+                <StackPanel Orientation="Vertical">
+                    <ContentControl ContentTemplate="{StaticResource resNucleotide}" 
+                                    Content="{x:Bind}"   
+                                    HorizontalAlignment="Center"
+                                    Foreground="White"
+                                    Width="Auto"/>
+                    <TextBlock    Width="Auto" Text="Cytosine"   HorizontalAlignment="Center"
+                                  Style="{StaticResource   CaptionTextBlockStyle}"
+                                  Margin="2"
+                                  Foreground="White"
+                    />
+                </StackPanel>
+
+            </Border>
+
+        </DataTemplate>
+
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    The Guanine nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide_Guanine" x:DataType="local:clWinUINucleotide">
+            <Border BorderThickness="2, 2, 2, 2"    Background="LightGreen"   BorderBrush="{StaticResource    ControlElevationBorderBrush}">
+                <StackPanel Orientation="Vertical">
+                    <ContentControl ContentTemplate="{StaticResource resNucleotide}" 
+                                    Content="{x:Bind}"   
+                                    HorizontalAlignment="Center"
+                                    Width="Auto"/>
+                    <TextBlock    Width="Auto" Text="Guanine"   HorizontalAlignment="Center"
+                                  Style="{StaticResource   CaptionTextBlockStyle}"
+                                  Margin="2"
+                    />
+                </StackPanel>
+            </Border>
+
+        </DataTemplate>
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    The Uracil nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide_Uracil" x:DataType="local:clWinUINucleotide">
+            <Border BorderThickness="2, 2, 2, 2"    
+                    Background="DarkViolet"   
+                    BorderBrush="{StaticResource    ControlElevationBorderBrush}"
+                    >
+                <StackPanel Orientation="Vertical">
+                    <ContentControl ContentTemplate="{StaticResource resNucleotide}" 
+                                    Content="{x:Bind}"   
+                                    HorizontalAlignment="Center"
+                                    Foreground="White"
+                                    Width="Auto"/>
+                    <TextBlock    Width="Auto" Text="Uracil"   HorizontalAlignment="Center"
+                                  Style="{StaticResource   CaptionTextBlockStyle}"
+                                  Foreground="White"
+                                  Margin="2"
+                    />
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+        
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    The Error nucleotide -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <DataTemplate x:Key="resNucleotide_Error" x:DataType="local:clWinUINucleotide">
+            <Border BorderThickness="2, 2, 2, 2"    
+                    Background="{StaticResource SystemFillColorCriticalBackgroundBrush}"   
+                    BorderBrush="{StaticResource    SystemFillColorCriticalBrush}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock  Width="Auto" Text="Error"   HorizontalAlignment="Center"
+                                    Margin="2"
+                                    Style="{StaticResource    BodyStrongTextBlockStyle}"
+                        />
+                    </StackPanel>
+            </Border>
+        </DataTemplate>
+        
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    Data template selector to be used to display the nucleotids -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <local:clWinUI_DataTemplateSelector_RNA_Nucleotids
+            
+                x:Key="Key_WinUI_DataTemplateSelector_RNA_Nucleotids"
+            
+                Adenine_Property="{StaticResource resNucleotide_Adenine}"
+                Cytosine_Property="{StaticResource resNucleotide_Cytosine}"
+                Guanine_Property="{StaticResource resNucleotide_Guanine}"
+                Uracil_Property="{StaticResource resNucleotide_Uracil}"
+                Error_Property="{StaticResource resNucleotide_Error}"
+        />
+    </Page.Resources>
+
+    <StackPanel>
+        <!--
+        <TextBlock  Text="{x:Bind   GetWinUIRNA_Page_Property.iGetRNANbNucleotides, Converter={StaticResource Converter_NbNucleotides}, Mode=OneWay}"/>
+        -->
+
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <!--    Grid to show the RNA -->
+        <!--    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    -->
+        <ListView   x:Name="List_RNA"
+            ItemsSource="{x:Bind     GetWinUIRNA_Page_Property.Get_obsvecRNA_Property, Mode=OneWay}"
+            ItemTemplateSelector="{StaticResource    Key_WinUI_DataTemplateSelector_RNA_Nucleotids}"
+            Width="100"
+    >
+        </ListView>
+        <!--
+
+    -->
+    </StackPanel>
+</Page>
